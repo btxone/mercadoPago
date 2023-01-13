@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const http = require('http');
 
-
 const app = express();
 
 const port = process.env.PORT || 3000;
@@ -56,8 +55,11 @@ mercadopago.configure({
 
 
 
-http.createServer(app).listen(app.get('port'), () => {
-    console.log(` HTTP escuchando en puerto ${port}`)
+// http.createServer(app).listen(app.get('port'), () => {
+//     console.log(` HTTP escuchando en puerto ${port}`)
+// });
+
+
+app.listen(port, () => {
+    console.log(`Servidor escuchando en puerto ${port}`)
 });
-
-
