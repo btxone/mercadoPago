@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 app.get('/generar', (req, res) => {
 let preference = {
     back_urls: {    
-        success: '*',
+        success: 'https://mercadopago-production.up.railway.app/success',
     },
     items: [
         {
@@ -20,7 +20,7 @@ let preference = {
             currency_id: 'UYU',
         },
     ],
-    //  Notification_url: 'http://localhost:3000/notification', 
+    //  Notification_url: 'https://mercadopago-production.up.railway.app/notification', 
 };
 
 mercadopago.preferences
