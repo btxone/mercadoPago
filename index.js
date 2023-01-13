@@ -20,7 +20,7 @@ let preference = {
             currency_id: 'UYU',
         },
     ],
-    //  Notification_url: 'https://mercadopago-production.up.railway.app/notification', 
+     Notification_url: 'https://mercadopago-production.up.railway.app/notification', 
 };
 
 mercadopago.preferences
@@ -40,7 +40,7 @@ app.get('/success', (req, res) => {
 });
 
 
-app.use('/notification', (req, res) => {
+app.post('/notification', (req, res) => {
     console.log('Notificación recibida');
     res.send('Notificación recibida');
 });
