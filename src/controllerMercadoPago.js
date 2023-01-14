@@ -10,7 +10,7 @@ mercadopago.configure({
 const createPreference = async (req, res) => {
     let preference = {
         back_urls: {    
-            success: 'http://localhost:3000/success',
+            success: 'https://mercadopago-production.up.railway.app/success',
         },
         items: [
             {
