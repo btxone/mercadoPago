@@ -12,6 +12,8 @@ server.use(morgan("dev"));
 
 const port = process.env.PORT || 3000;
 
+console.log(process.env.PORT);
+
 const key = process.env.MERCADO_KEY;
 
 
