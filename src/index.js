@@ -1,21 +1,29 @@
 
 require('dotenv').config();
 
-const express = require('express');
-const app = express();
+const server = require('./app')
+
+const dbConnect = require('./db')
+
+const morgan = require('morgan')
+
+server.use(morgan("dev"));
+// const routes = require('./routesIndex')
+
 const port = process.env.PORT || 3000;
 
-const routes = require('./routesIndex')
 const key = process.env.MERCADO_KEY;
-app.use(routes);
+
+
 
 console.log(key);
 
-app.listen(port, () => {
+server.listen(port, () => {
     console.log(`Servidor escuchando en puerto ${port}`)
 });
 
 
+dbConnect();
 
 
 
